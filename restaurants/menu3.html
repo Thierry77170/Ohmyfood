@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    >
+    <link href="../SASS/main.css" rel="stylesheet">
+    <link href="../SASS/menu.css" rel="stylesheet">
+    <title>Menu - À la française</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="header__arrow">
+        <i class="fa-sharp fa-solid fa-arrow-left fa-lg" id="retour"></i>
+      </a>
+      <img
+        src="../assets/logo/ohmyfood.png"
+        alt="logo ohmyfood"
+        class="header__logo"
+      >
+    </header>
+    <main>
+      <section>
+        <div class="photoMenu3"></div>
+      </section>
+      <section class="menu">
+        <ul class="container">
+          <li><h1 class="container__title">À la française</h1></li>
+          <li class="container__heart">
+            <label for="menilmontant" class="menilmontant">
+              <input type="checkbox" id="menilmontant">
+              <span class="menilmontant__like"></span>
+            </label>
+          </li>
+        </ul>
+        <div class="menuPart">
+          <h2>ENTRÉES</h2>
+          <div class="menuPart__underlines"></div>
+        </div>
+
+        <label class="plateAndPrice L1" for="tartare">
+          <input type="checkbox" id="tartare">
+          <span class="plateAndPrice__plate">
+            <span class="plateAndPrice__plate--title"
+              >Tartare de poulpe acidulé</span
+            >
+            <span class="plateAndPrice__plate--text">Aux zestes d'orange</span>
+          </span>
+          <span class="plateAndPrice__checked">
+            <span class="plateAndPrice__checked--price">25€</span>
+            <span class="plateAndPrice__checked--logo">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </span>
+        </label>
+
+        <label class="plateAndPrice L2" for="veloute">
+          <input type="checkbox" id="veloute">
+          <span class="plateAndPrice__plate">
+            <span class="plateAndPrice__plate--title"
+              >Velouté de légumes d'antan</span
+            >
+            <span class="plateAndPrice__plate--text"
+              >Carotte, panais, topinambour</span
+            >
+          </span>
+          <span class="plateAndPrice__checked">
+            <span class="plateAndPrice__checked--price">35€</span>
+            <span class="plateAndPrice__checked--logo">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </span>
+        </label>
+
+        <label class="plateAndPrice L3" for="soupe">
+          <input type="checkbox" id="soupe">
+          <span class="plateAndPrice__plate">
+            <span class="plateAndPrice__plate--title">Soupe à l'oignon</span>
+            <span class="plateAndPrice__plate--text">Revisitée</span>
+          </span>
+          <span class="plateAndPrice__checked">
+            <span class="plateAndPrice__checked--price">20€</span>
+            <span class="plateAndPrice__checked--logo">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </span>
+        </label>
+
+        <div class="menuPart">
+          <h2>PLATS</h2>
+          <div class="menuPart__underlines"></div>
+        </div>
+
+        <label class="plateAndPrice L4" for="saintJacques">
+          <input type="checkbox" id="saintJacques">
+          <span class="plateAndPrice__plate">
+            <span class="plateAndPrice__plate--title"
+              >Coquilles Saint-Jacques</span
+            >
+            <span class="plateAndPrice__plate--text"
+              >Accompagnées d'une purée de panais</span
+            >
+          </span>
+          <span class="plateAndPrice__checked">
+            <span class="plateAndPrice__checked--price">40€</span>
+            <span class="plateAndPrice__checked--logo">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </span>
+        </label>
+
+        <label class="plateAndPrice L5" for="magret">
+          <input type="checkbox" id="magret">
+          <span class="plateAndPrice__plate">
+            <span class="plateAndPrice__plate--title">Magret de canard</span>
+            <span class="plateAndPrice__plate--text"
+              >Et parmentier de pommes de terre</span
+            >
+          </span>
+          <span class="plateAndPrice__checked">
+            <span class="plateAndPrice__checked--price">35€</span>
+            <span class="plateAndPrice__checked--logo">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </span>
+        </label>
+
+        <label class="plateAndPrice L6" for="pigeonneau">
+          <input type="checkbox" id="pigeonneau">
+          <span class="plateAndPrice__plate">
+            <span class="plateAndPrice__plate--title"
+              >Pigeonneau d'Ille-et-Vilaine</span
+            >
+            <span class="plateAndPrice__plate--text"
+              >Sur son lit de gnocchis aux légumes</span
+            >
+          </span>
+          <span class="plateAndPrice__checked">
+            <span class="plateAndPrice__checked--price">44€</span>
+            <span class="plateAndPrice__checked--logo">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </span>
+        </label>
+
+        <div class="menuPart">
+          <h2>DESSERTS</h2>
+          <div class="menuPart__underlines"></div>
+        </div>
+
+        <label class="plateAndPrice 7" for="petales">
+          <input type="checkbox" id="petales">
+          <span class="plateAndPrice__plate">
+            <span class="plateAndPrice__plate--title"
+              >Pétales de violettes glacés</span
+            >
+            <span class="plateAndPrice__plate--text"
+              >Et purée de noisettes</span
+            >
+          </span>
+          <span class="plateAndPrice__checked">
+            <span class="plateAndPrice__checked--price">18€</span>
+            <span class="plateAndPrice__checked--logo">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </span>
+        </label>
+
+        <label class="plateAndPrice L8" for="fondant">
+          <input type="checkbox" id="fondant">
+          <span class="plateAndPrice__plate">
+            <span class="plateAndPrice__plate--title">Fondant au chocolat</span>
+            <span class="plateAndPrice__plate--text">Revisité</span>
+          </span>
+          <span class="plateAndPrice__checked">
+            <span class="plateAndPrice__checked--price">22€</span>
+            <span class="plateAndPrice__checked--logo">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </span>
+        </label>
+
+        <label class="plateAndPrice L9" for="millefeuille">
+          <input type="checkbox" id="millefeuille">
+          <span class="plateAndPrice__plate">
+            <span class="plateAndPrice__plate--title"
+              >Millefeuille croustillant</span
+            >
+            <span class="plateAndPrice__plate--text"
+              >Myrtilles et pâte d'amande</span
+            >
+          </span>
+          <span class="plateAndPrice__checked">
+            <span class="plateAndPrice__checked--price">23€</span>
+            <span class="plateAndPrice__checked--logo">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </span>
+        </label>
+
+        <a href="#" class="button">
+          <span class="button--text">Commander</span>
+        </a>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <h3 class="footer__title">ohmyfood</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a
+            >
+          </li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

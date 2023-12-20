@@ -1,0 +1,394 @@
+/******** button ***************/
+/****** heart ****************/
+/******** Photos menus ***************/
+/******** h2 menus ***************/
+/************* footer ***************/
+/********** loader ************/
+/********** heart ************/
+@keyframes changeHeart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes changeHeartReverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/********** plate and price ************/
+@keyframes moveAnimationUnchecked {
+  from {
+    transform: translateX(100%);
+    left: -44px;
+  }
+  to {
+    transform: translateX(0%);
+    left: 0px;
+  }
+}
+@keyframes moveAnimationChecked {
+  from {
+    transform: translateX(0%);
+    left: 0px;
+  }
+  to {
+    transform: translateX(100%);
+    left: -44px;
+  }
+}
+@keyframes plateTranslate {
+  0% {
+    transform: translateX(-40%);
+  }
+  20% {
+    transform: translateX(10%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  60% {
+    transform: translateX(5%);
+  }
+  80% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+/********** loader ************/
+@keyframes loaderOpacity {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  95%, 96% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loaderRotate {
+  from {
+    transform: rotate(0deg);
+    z-index: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    z-index: -1;
+  }
+}
+/****** General mobile *****/
+body {
+  font-family: "Roboto", sans serif;
+}
+
+/*********** main **********/
+.photoMenu1 {
+  background-image: url(../assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  width: 100%;
+  height: 275px;
+}
+
+.photoMenu2 {
+  background-image: url(../assets/images/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  width: 100%;
+  height: 275px;
+}
+
+.photoMenu3 {
+  background-image: url(../assets/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  width: 100%;
+  height: 275px;
+}
+
+.photoMenu4 {
+  background-image: url(../assets/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  width: 100%;
+  height: 275px;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0px 0px;
+  max-width: 1055px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+/********* h1 and heart **********/
+.container li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 30px 0px 0px 0px;
+  align-items: center;
+  justify-content: center;
+  margin-top: -32px;
+  gap: 24px;
+}
+.container__title {
+  margin: 0px;
+  font-size: 28px;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+}
+
+input {
+  display: none;
+}
+
+.menilmontant {
+  display: flex;
+  align-items: center;
+  width: 22px;
+  height: 21px;
+  position: relative;
+  cursor: pointer;
+}
+.menilmontant__like::before {
+  content: "";
+  display: block;
+  background-image: url("../assets/logo/Like.png");
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menilmontant__like::after {
+  content: "";
+  display: block;
+  background-image: url("../assets/logo/LikePink.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity;
+  width: 22px;
+  height: 21px;
+}
+
+#menilmontant:checked + .menilmontant__like::after {
+  opacity: 1;
+  animation: changeHeart 0.4s forwards;
+}
+
+#menilmontant:not(:checked) + .menilmontant__like::after {
+  opacity: 0;
+  animation: changeHeartReverse 0.4s forwards;
+}
+
+/********** title-menu **************/
+h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 40px 0px 5px 0px;
+}
+
+.menuPart {
+  width: 98%;
+  max-width: 634px;
+  margin: auto;
+}
+.menuPart__underlines {
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  height: 0px;
+}
+
+/********** plate and price ********/
+.plateAndPrice {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 69px;
+  padding: 0px;
+  width: 98%;
+  max-width: 634px;
+  margin: auto;
+  margin-top: 12px;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+}
+.plateAndPrice__plate {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.plateAndPrice__plate--title {
+  margin: 5px 0px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plateAndPrice__plate--text {
+  margin: 5px 0px;
+  font-size: 0.94rem;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plateAndPrice__checked {
+  width: 154px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0px;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  position: relative;
+  animation-name: moveAnimationUnchecked;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+}
+.plateAndPrice__checked--price {
+  display: flex;
+  align-items: end;
+  background-color: white;
+  font-size: 0.94rem;
+  padding-bottom: 13px;
+  padding-left: 5px;
+  width: 44px;
+}
+.plateAndPrice__checked--logo {
+  background-color: white;
+  border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24.5px;
+  left: 60%;
+}
+
+.plateAndPrice input:checked ~ .plateAndPrice__checked {
+  animation-name: moveAnimationUnchecked;
+}
+
+.plateAndPrice input:checked ~ .plateAndPrice__checked {
+  animation-name: moveAnimationChecked;
+}
+
+.plateAndPrice__checked--logo i.fa-solid {
+  color: #99E2D0;
+  font-size: 16px;
+  margin-right: 0px;
+}
+
+.L1 {
+  animation: plateTranslate linear forwards 0.4s;
+}
+
+.L2 {
+  animation: plateTranslate linear forwards 0.8s;
+}
+
+.L3 {
+  animation: plateTranslate linear forwards 1.2s;
+}
+
+.L4 {
+  animation: plateTranslate linear forwards 1.6s;
+}
+
+.L5 {
+  animation: plateTranslate linear forwards 2s;
+}
+
+.L6 {
+  animation: plateTranslate linear forwards 2.4s;
+}
+
+.L7 {
+  animation: plateTranslate linear forwards 2.8s;
+}
+
+.L8 {
+  animation: plateTranslate linear forwards 3.2s;
+}
+
+.L9 {
+  animation: plateTranslate linear forwards 3.6s;
+}
+
+.L10 {
+  animation: plateTranslate linear forwards 4s;
+}
+
+/********** button ************/
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: auto;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  transition: all 0.45s;
+  margin-top: 40px;
+}
+.button--text {
+  color: white;
+}
+.button:hover {
+  opacity: 0.8;
+  box-shadow: 0px 4px 13px 3px rgba(0, 0, 0, 0.3);
+}
+
+/********** animation loading ************/
+/****** responsive tablette and desktop *****/
+@media screen and (min-width: 768px) {
+  .photoMenu1,
+  .photoMenu2,
+  .photoMenu3,
+  .photoMenu4 {
+    height: 383px;
+  }
+}/*# sourceMappingURL=menu.css.map */

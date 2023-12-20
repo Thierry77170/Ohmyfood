@@ -1,0 +1,219 @@
+@charset "UTF-8";
+/******** button ***************/
+/****** heart ****************/
+/******** Photos menus ***************/
+/******** h2 menus ***************/
+/************* footer ***************/
+/********** loader ************/
+/********** heart ************/
+@keyframes changeHeart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes changeHeartReverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/********** plate and price ************/
+@keyframes moveAnimationUnchecked {
+  from {
+    transform: translateX(100%);
+    left: -44px;
+  }
+  to {
+    transform: translateX(0%);
+    left: 0px;
+  }
+}
+@keyframes moveAnimationChecked {
+  from {
+    transform: translateX(0%);
+    left: 0px;
+  }
+  to {
+    transform: translateX(100%);
+    left: -44px;
+  }
+}
+@keyframes plateTranslate {
+  0% {
+    transform: translateX(-40%);
+  }
+  20% {
+    transform: translateX(10%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  60% {
+    transform: translateX(5%);
+  }
+  80% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+/********** loader ************/
+@keyframes loaderOpacity {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  95%, 96% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loaderRotate {
+  from {
+    transform: rotate(0deg);
+    z-index: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    z-index: -1;
+  }
+}
+/****** général mobile *****/
+body {
+  font-family: "Roboto", sans serif;
+}
+
+/****** header mobile *****/
+.header {
+  width: auto;
+  height: 3.4rem;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: auto;
+  align-items: center;
+  padding: 9px 0px 0px 0px;
+}
+.header__arrow {
+  width: auto;
+  height: auto;
+  justify-self: center;
+  cursor: pointer;
+}
+.header__logo {
+  width: 10.12rem;
+  height: 30px;
+  justify-self: center;
+  padding: 0px 19px;
+}
+
+.header i.fa-solid {
+  font-size: 24px;
+  padding-left: 17px;
+}
+
+.header i.fa-arrow-left {
+  color: #353535;
+}
+
+/****** footer mobile *****/
+footer {
+  background-color: #353535;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 20rem;
+  grid-template-rows: auto auto;
+  background-color: #353535;
+  padding: 23px 1.56rem;
+  justify-content: center;
+}
+.footer__title {
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  color: white;
+  margin: 0px;
+  padding-left: 10px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style: none;
+  padding: 0px;
+  margin: 16px 0px 0px 0px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+}
+
+footer a:hover {
+  color: #99E2D0;
+}
+
+i.fa-solid {
+  font-size: 14px;
+  margin-right: 11px;
+}
+
+i.fa-handshake-angle {
+  font-size: 10px;
+}
+
+/****** responsive tablette and desktop *****/
+@media screen and (min-width: 500px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer__title {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  /****** header tablette and desktop *****/
+  .header {
+    height: 87px;
+  }
+  /****** footer tablette and desktop *****/
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1390px;
+    justify-content: end;
+    height: 54px;
+    padding: 30px 25px;
+  }
+  .footer__title {
+    font-size: 18px;
+    margin: 26px 0px 10px 0px;
+  }
+  .footer__list {
+    display: grid;
+    grid-template-columns: 190px 175px 125px 100px;
+    grid-template-rows: 19px;
+    align-self: end;
+    margin: 0px;
+  }
+  i.fa-handshake-angle {
+    font-size: 12px;
+  }
+  footer a {
+    padding-left: 0px;
+  }
+}/*# sourceMappingURL=main.css.map */

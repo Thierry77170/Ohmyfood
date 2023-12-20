@@ -1,0 +1,393 @@
+@import "../SASS/variables.scss";
+@import "../SASS/mixins.scss";
+@import "../SASS/keyframes.scss";
+
+/*********** header mobile ***********/
+
+.header__logo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/********** location mobile ************/
+
+.location {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEAEA;
+    font-weight: $font-weight500;
+    font-size: 1rem;
+    gap: 15px;
+}
+
+/************ exploration mobile ***********/
+
+.exploration {
+    background-color: $background-color-grey;
+    text-align: center;
+    padding-bottom: 57px;
+
+    &__title {
+        margin: 0px 0px;
+        padding: 40px 3.12rem 0px 3.12rem;
+        width: auto;
+        height: 4.25rem; 
+    }
+
+    &__text {
+        font-size: 1.125rem;
+        font-weight: $font-weight300;
+        margin: 0px 0px;
+        padding:5px 0px 35px 0px;
+    }
+
+    &__button {
+        @include button;
+    }
+}
+
+/************ functioning mobile **************/
+
+.functioning {
+    margin: auto;
+    width: 96%;
+    max-width: 21rem;
+    padding-bottom: 60px;
+
+    &__title {
+        padding: 30px 0px 5px 0px;
+    }
+
+    &__Center {
+        padding-left: 13px;
+    }
+}
+
+.rectangle {
+    display: grid;
+    grid-template-columns: 8% 8% 68% 8% 8%;
+    grid-template-rows: auto;
+    align-items: center;
+    place-items: center;
+    background-color: $background-color-grey;
+    height: 72.38px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: $box-shadow-rectangle;
+    margin-top: 20px;
+    
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        height: 24px;
+        width: 24px;
+        background-color: $background-color-primary;
+        justify-self: center;
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+        margin-left: -26px;
+    }
+
+    &__text {
+        justify-self: center;
+        font-weight: $font-weight500;
+    }
+}
+
+.rectangle .fa-solid {
+    font-size: 20px;
+}
+
+.rectangle .fa-mobile-screen-button {
+    color: $color-grey-tint4;
+}
+
+.rectangle .fa-list-ul {
+    color: $color-grey-tint4;
+}
+
+.rectangle .fa-store {
+    color: $background-color-primary;
+}
+
+/************* Restaurants mobile ****************/
+
+.restaurants {
+    background-color: $background-color-grey;
+    display: grid;
+    grid-template-columns: 98%;
+    justify-content: center;
+    padding-bottom: 66px;
+
+    &__title {
+        padding-top: 54px;
+        padding-bottom: 20px;
+        width: 100%;
+        max-width: 340px;
+        margin: auto;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-left: 0px;
+        gap: 18px;
+
+        width: 98%;
+        margin: auto;
+    }   
+}
+
+.restaurants__cards li {
+    width: 100%;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column; 
+    height: 251px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: $color-black-font;
+    
+    &__images {
+        width: 100%;
+        height: 177px;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;
+    }
+
+    &__text {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 50% 50%;
+        width: auto;
+        height: 74px;
+        padding-left: 13px;
+
+        &--h3 {
+            font-size: 1.125rem;
+            margin: 12px 0px 5px 0px;
+            grid-column: 1/2;
+        }
+
+        &--p {
+            font-size: 1.063rem;
+            font-weight: $font-weight300;
+            grid-column: 1/2;
+            margin: 0px;
+        }    
+    }
+
+    &__nouveau {
+        position: absolute;
+        left: 66%;
+        height: 29px;
+        width: 80px;
+        margin: 16px 16px;
+        background-color: $background-color-green;
+        color: $color-green-font;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: $font-weight500;
+    }
+
+}
+
+.restaurants__cards li {
+    position: relative;
+}
+
+input {
+    display: none;
+} 
+
+.checkHeart {
+    @include heart;
+
+    &__like::before {
+        @include likeBefore;
+    }
+
+    &__like::after {
+        @include likeAfter;
+    }
+}
+
+#menilmontant:checked + .checkHeart__like::after {
+    opacity: 1;
+    animation: changeHeart 0.4s forwards;
+}
+
+#menilmontant:not(:checked) + .checkHeart__like::after {
+    opacity: 0;
+    animation: changeHeartReverse 0.4s forwards;
+}
+
+#charonne:checked + .checkHeart__like::after {
+    opacity: 1;
+    animation: changeHeart 0.4s forwards;
+}
+
+#charonne:not(:checked) + .checkHeart__like::after {
+    opacity: 0;
+    animation: changeHeartReverse 0.4s forwards;
+}
+
+#citeRouge:checked + .checkHeart__like::after {
+    opacity: 1;
+    animation: changeHeart 0.4s forwards;
+}
+
+#citeRouge:not(:checked) + .checkHeart__like::after {
+    opacity: 0;
+    animation: changeHeartReverse 0.4s forwards;
+}
+
+#folie:checked + .checkHeart__like::after {
+    opacity: 1;
+    animation: changeHeart 0.4s forwards;
+}
+
+#folie:not(:checked) + .checkHeart__like::after {
+    opacity: 0;
+    animation: changeHeartReverse 0.4s forwards;
+}
+
+/********** loader ************/
+
+.loader {
+    @include loader;
+    
+    &::before {
+       @include loaderBefore; 
+    }
+
+    &::after {
+        @include loaderAfter;
+    }
+}
+
+/*************** responsive tablette and desktop *****************/
+
+@media screen and (min-width: 1024px) {
+    /****** Exploration tablette and mobile *******/
+    .exploration {
+        padding-bottom: 30px;
+
+        &__title {
+            font-size: 40px;
+            padding-top: 30px;
+        }
+    }
+    
+    /******** functioning tablette and desktop ******/
+    .functioning {
+
+        display: grid;
+        grid-template-columns: 61.8rem;
+        justify-content: center;
+        padding-bottom: 50px;
+       
+    
+        &__title {
+            padding: 50px 0px 15px 0px;
+            margin: 0px;
+        }
+    
+        &__Center {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 98%;
+            gap: 2.22rem;
+            margin: 0px;
+            padding-left: 15px;
+        }
+    }
+    
+    .rectangle {
+        width: 19.6rem;
+    }
+    
+    .rectangle .fa-mobile-screen-button {
+        color: $color-grey-tint4;
+    }
+    
+    .rectangle .fa-list-ul {
+        color: $color-grey-tint4;
+    }
+    
+    .rectangle .fa-store {
+        color: $background-color-primary;
+    }
+
+    /****** Restaurants tablette and mobile *****/
+    .restaurants {
+        grid-template-columns: 63rem;
+        justify-content: center;
+
+        &__title {
+            max-width: 98%;
+        }
+    
+        &__cards {
+            display: grid;
+            grid-template-columns: 46% 46%;
+            grid-template-rows: 251px 251px;
+            justify-content: space-between;
+            gap: 8%;
+        }
+    }
+
+    .restaurants__cards li {
+        max-width: 100%;    
+    }
+
+    .cards {
+        width: 28.98rem;
+
+        &__images {
+            width: 100%;
+        }
+
+        &__nouveau {
+            left: 21.85rem;
+        }
+    }
+
+    .menilmontant,
+    .charonne, 
+    .citeRouge,
+    .folie {
+        left: 415px;
+    }
+    /********** loader ************/
+
+    .loader {
+
+        &::before {
+            font-size: 52px;
+        }
+    
+        &::after {
+            content: "";
+            height: 400px;
+            width: 400px;
+        }
+    }
+}
+
+
+
