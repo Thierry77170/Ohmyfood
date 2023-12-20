@@ -205,7 +205,7 @@ i.fa-handshake-angle {
   }
   .footer__list {
     display: grid;
-    grid-template-columns: 190px 175px 125px 100px;
+    grid-template-columns: 190px 175px 125px 80px;
     grid-template-rows: 19px;
     align-self: end;
     margin: 0px;
