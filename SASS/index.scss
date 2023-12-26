@@ -78,6 +78,10 @@
     border-radius: 20px;
     box-shadow: $box-shadow-rectangle;
     margin-top: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
     
     &__number {
         display: flex;
@@ -104,14 +108,30 @@
 
 .rectangle .fa-mobile-screen-button {
     color: $color-grey-tint4;
+    cursor: pointer;
+
+    &:hover {
+        color: $background-color-primary;
+    }
 }
 
 .rectangle .fa-list-ul {
     color: $color-grey-tint4;
+    cursor: pointer;
+
+    &:hover {
+        color: $background-color-primary;
+    }
+    
 }
 
 .rectangle .fa-store {
-    color: $background-color-primary;
+    color: $color-grey-tint4;
+    cursor: pointer;
+
+    &:hover {
+        color: $background-color-primary;
+    }
 }
 
 /************* Restaurants mobile ****************/

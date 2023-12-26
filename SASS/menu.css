@@ -22,24 +22,20 @@
   }
 }
 /********** plate and price ************/
-@keyframes moveAnimationUnchecked {
-  from {
-    transform: translateX(100%);
-    left: -44px;
-  }
-  to {
-    transform: translateX(0%);
-    left: 0px;
-  }
-}
 @keyframes moveAnimationChecked {
   from {
-    transform: translateX(0%);
-    left: 0px;
+    transform: translateX(61%);
   }
   to {
-    transform: translateX(100%);
-    left: -44px;
+    transform: translateX(0%);
+  }
+}
+@keyframes moveAnimationUnChecked {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(61%);
   }
 }
 @keyframes plateTranslate {
@@ -60,6 +56,14 @@
   }
   100% {
     transform: translateX(0%);
+  }
+}
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /********** loader ************/
@@ -268,7 +272,7 @@ h2 {
   text-overflow: ellipsis;
 }
 .plateAndPrice__checked {
-  width: 154px;
+  width: 152px;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -277,10 +281,7 @@ h2 {
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   position: relative;
-  animation-name: moveAnimationUnchecked;
-  animation-direction: alternate-reverse;
-  animation-fill-mode: forwards;
-  animation-duration: 0.3s;
+  animation: opacityAnimation 0.5s ease-in-out forwards;
 }
 .plateAndPrice__checked--price {
   display: flex;
@@ -304,12 +305,20 @@ h2 {
   left: 60%;
 }
 
-.plateAndPrice input:checked ~ .plateAndPrice__checked {
-  animation-name: moveAnimationUnchecked;
+.plateAndPrice input:not(:checked) ~ .plateAndPrice__checked {
+  animation-name: moveAnimationUnChecked;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  right: 0px;
 }
 
 .plateAndPrice input:checked ~ .plateAndPrice__checked {
   animation-name: moveAnimationChecked;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  right: 0px;
 }
 
 .plateAndPrice__checked--logo i.fa-solid {
@@ -320,42 +329,52 @@ h2 {
 
 .L1 {
   animation: plateTranslate linear forwards 0.4s;
+  animation-delay: 0.3s;
 }
 
 .L2 {
   animation: plateTranslate linear forwards 0.8s;
+  animation-delay: 0.3s;
 }
 
 .L3 {
   animation: plateTranslate linear forwards 1.2s;
+  animation-delay: 0.3s;
 }
 
 .L4 {
   animation: plateTranslate linear forwards 1.6s;
+  animation-delay: 0.3s;
 }
 
 .L5 {
   animation: plateTranslate linear forwards 2s;
+  animation-delay: 0.3s;
 }
 
 .L6 {
   animation: plateTranslate linear forwards 2.4s;
+  animation-delay: 0.3s;
 }
 
 .L7 {
   animation: plateTranslate linear forwards 2.8s;
+  animation-delay: 0.3s;
 }
 
 .L8 {
   animation: plateTranslate linear forwards 3.2s;
+  animation-delay: 0.3s;
 }
 
 .L9 {
   animation: plateTranslate linear forwards 3.6s;
+  animation-delay: 0.3s;
 }
 
 .L10 {
   animation: plateTranslate linear forwards 4s;
+  animation-delay: 0.3s;
 }
 
 /********** button ************/

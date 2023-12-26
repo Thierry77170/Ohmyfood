@@ -23,24 +23,21 @@
   }
 }
 /********** plate and price ************/
-@keyframes moveAnimationUnchecked {
-  from {
-    transform: translateX(100%);
-    left: -44px;
-  }
-  to {
-    transform: translateX(0%);
-    left: 0px;
-  }
-}
 @keyframes moveAnimationChecked {
   from {
     transform: translateX(0%);
-    left: 0px;
+    left: -44px;
   }
   to {
     transform: translateX(100%);
-    left: -44px;
+  }
+}
+@keyframes moveAnimationUnChecked {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 @keyframes plateTranslate {

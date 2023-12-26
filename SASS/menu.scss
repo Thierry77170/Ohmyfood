@@ -150,7 +150,7 @@ h2 {
     }
 
     &__checked {
-        width: 154px;
+        width: 152px;
         height: 100%;
         display: flex;
         flex-direction: row;
@@ -159,10 +159,8 @@ h2 {
         background-color: $color-green;
         border-radius: 0px 15px 15px 0px;
         position: relative;
-        animation-name: moveAnimationUnchecked;
-        animation-direction: alternate-reverse;
-        animation-fill-mode: forwards;
-        animation-duration: 0.3s;
+        animation: opacityAnimation 0.5s ease-in-out forwards;
+        
         
         &--price {
             display: flex;
@@ -189,24 +187,33 @@ h2 {
     }
 }
 
-.plateAndPrice input:checked ~ .plateAndPrice__checked {
-    animation-name: moveAnimationUnchecked;
+.plateAndPrice input:not(:checked) ~ .plateAndPrice__checked {
+    animation-name: moveAnimationUnChecked;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+    right: 0px;
 }
 
 .plateAndPrice input:checked ~ .plateAndPrice__checked {
     animation-name: moveAnimationChecked;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+    right: 0px; 
 }
-
 
 .plateAndPrice__checked--logo i.fa-solid {
     color: $color-green;
     font-size: 16px;
     margin-right: 0px;
+    
 }
 
 @for $i from 1 through 10 {
     .L#{$i}{
         animation: plateTranslate linear forwards #{$i * 0.4}s;
+        animation-delay: 0.3s;
     }
 }
 

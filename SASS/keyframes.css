@@ -16,24 +16,20 @@
   }
 }
 /********** plate and price ************/
-@keyframes moveAnimationUnchecked {
-  from {
-    transform: translateX(100%);
-    left: -44px;
-  }
-  to {
-    transform: translateX(0%);
-    left: 0px;
-  }
-}
 @keyframes moveAnimationChecked {
   from {
-    transform: translateX(0%);
-    left: 0px;
+    transform: translateX(61%);
   }
   to {
-    transform: translateX(100%);
-    left: -44px;
+    transform: translateX(0%);
+  }
+}
+@keyframes moveAnimationUnChecked {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(61%);
   }
 }
 @keyframes plateTranslate {
@@ -54,6 +50,14 @@
   }
   100% {
     transform: translateX(0%);
+  }
+}
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /********** loader ************/
