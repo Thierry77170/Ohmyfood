@@ -273,7 +273,6 @@ h2 {
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   position: relative;
-  animation: opacityLoader 3s ease-in-out forwards;
 }
 .plateAndPrice__checked--price {
   display: flex;
