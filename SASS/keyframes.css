@@ -52,14 +52,6 @@
     transform: translateX(0%);
   }
 }
-@keyframes opacityAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /********** loader ************/
 @keyframes loaderOpacity {
   0% {

@@ -24,19 +24,18 @@
 /********** plate and price ************/
 @keyframes moveAnimationChecked {
   from {
-    transform: translateX(0%);
-    left: -44px;
+    transform: translateX(61%);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 }
 @keyframes moveAnimationUnChecked {
   from {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   to {
-    transform: translateX(0%);
+    transform: translateX(61%);
   }
 }
 @keyframes plateTranslate {
@@ -464,9 +463,6 @@ input {
   }
   .rectangle .fa-list-ul {
     color: #7E7E7E;
-  }
-  .rectangle .fa-store {
-    color: #9356DC;
   }
   /****** Restaurants tablette and mobile *****/
   .restaurants {

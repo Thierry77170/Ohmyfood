@@ -58,14 +58,6 @@
     transform: translateX(0%);
   }
 }
-@keyframes opacityAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /********** loader ************/
 @keyframes loaderOpacity {
   0% {
@@ -281,7 +273,7 @@ h2 {
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   position: relative;
-  animation: opacityAnimation 0.5s ease-in-out forwards;
+  animation: opacityLoader 3s ease-in-out forwards;
 }
 .plateAndPrice__checked--price {
   display: flex;
