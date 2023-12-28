@@ -122,6 +122,14 @@ h2 {
     border-radius: 15px; 
     overflow: hidden;
     box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+
+    &:hover .plateAndPrice__checked {
+        animation-name: moveAnimationChecked;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out; 
+        animation-fill-mode: forwards;
+        right: 0px;
+    }
     
     &__plate {
         display: flex;
@@ -158,6 +166,7 @@ h2 {
         background-color: $color-green;
         border-radius: 0px 15px 15px 0px;
         position: relative;
+        right: -72px;
         
         &--price {
             display: flex;
@@ -182,22 +191,6 @@ h2 {
             left: 60%;
         }   
     }
-}
-
-.plateAndPrice input:not(:checked) ~ .plateAndPrice__checked {
-    animation-name: moveAnimationUnChecked;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
-    animation-duration: 0.3s;
-    right: 0px;
-}
-
-.plateAndPrice input:checked ~ .plateAndPrice__checked {
-    animation-name: moveAnimationChecked;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
-    animation-duration: 0.3s;
-    right: 0px; 
 }
 
 .plateAndPrice__checked--logo i.fa-solid {
