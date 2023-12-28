@@ -78,10 +78,6 @@
     border-radius: 20px;
     box-shadow: $box-shadow-rectangle;
     margin-top: 20px;
-
-    &:hover {
-        cursor: pointer;
-    }
     
     &__number {
         display: flex;
@@ -106,32 +102,31 @@
     font-size: 20px;
 }
 
-.rectangle .fa-mobile-screen-button {
+.fa-mobile-screen-button {
     color: $color-grey-tint4;
     cursor: pointer;
-
-    &:hover {
-        color: $background-color-primary;
-    }
 }
 
-.rectangle .fa-list-ul {
-    color: $color-grey-tint4;
-    cursor: pointer;
-
-    &:hover {
+.rectangle:hover .fa-mobile-screen-button {
         color: $background-color-primary;
     }
-    
+
+.fa-list-ul {
+    color: $color-grey-tint4;
+    cursor: pointer;
 }
 
-.rectangle .fa-store {
+.rectangle:hover .fa-list-ul {
+        color: $background-color-primary;    
+}
+
+.fa-store {
     color: $color-grey-tint4;
     cursor: pointer;
+}
 
-    &:hover {
-        color: $background-color-primary;
-    }
+.rectangle:hover .fa-store {
+    color: $background-color-primary;  
 }
 
 /************* Restaurants mobile ****************/
