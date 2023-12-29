@@ -241,7 +241,7 @@ h2 {
 }
 .plateAndPrice:hover .plateAndPrice__checked {
   animation-name: moveAnimationChecked;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   right: 0px;
@@ -281,13 +281,13 @@ h2 {
   right: -72px;
 }
 .plateAndPrice__checked--price {
-  display: flex;
-  align-items: end;
   background-color: white;
   font-size: 0.94rem;
-  padding-bottom: 13px;
+  padding-top: 40px;
   padding-left: 5px;
   width: 44px;
+  height: 69px;
+  margin: 0px;
 }
 .plateAndPrice__checked--logo {
   background-color: white;
@@ -306,56 +306,6 @@ h2 {
   color: #99E2D0;
   font-size: 16px;
   margin-right: 0px;
-}
-
-.L1 {
-  animation: plateTranslate linear forwards 0.4s;
-  animation-delay: 0.3s;
-}
-
-.L2 {
-  animation: plateTranslate linear forwards 0.8s;
-  animation-delay: 0.3s;
-}
-
-.L3 {
-  animation: plateTranslate linear forwards 1.2s;
-  animation-delay: 0.3s;
-}
-
-.L4 {
-  animation: plateTranslate linear forwards 1.6s;
-  animation-delay: 0.3s;
-}
-
-.L5 {
-  animation: plateTranslate linear forwards 2s;
-  animation-delay: 0.3s;
-}
-
-.L6 {
-  animation: plateTranslate linear forwards 2.4s;
-  animation-delay: 0.3s;
-}
-
-.L7 {
-  animation: plateTranslate linear forwards 2.8s;
-  animation-delay: 0.3s;
-}
-
-.L8 {
-  animation: plateTranslate linear forwards 3.2s;
-  animation-delay: 0.3s;
-}
-
-.L9 {
-  animation: plateTranslate linear forwards 3.6s;
-  animation-delay: 0.3s;
-}
-
-.L10 {
-  animation: plateTranslate linear forwards 4s;
-  animation-delay: 0.3s;
 }
 
 /********** button ************/
@@ -380,6 +330,46 @@ h2 {
 .button:hover {
   opacity: 0.8;
   box-shadow: 0px 4px 13px 3px rgba(0, 0, 0, 0.3);
+}
+
+.L1 {
+  animation: plateTranslate ease-in-out forwards 1.5s;
+}
+
+.L2 {
+  animation: plateTranslate ease-in-out forwards 1.5s 0.2s;
+}
+
+.L3 {
+  animation: plateTranslate ease-in-out forwards 1.5s 0.4s;
+}
+
+.L4 {
+  animation: plateTranslate ease-in-out forwards 1.5s 0.6s;
+}
+
+.L5 {
+  animation: plateTranslate ease-in-out forwards 1.5s 0.8s;
+}
+
+.L6 {
+  animation: plateTranslate ease-in-out forwards 1.5s 1s;
+}
+
+.L7 {
+  animation: plateTranslate ease-in-out forwards 1.5s 1.2s;
+}
+
+.L8 {
+  animation: plateTranslate ease-in-out forwards 1.5s 1.4s;
+}
+
+.L9 {
+  animation: plateTranslate ease-in-out forwards 1.5s 1.6s;
+}
+
+.L10 {
+  animation: plateTranslate ease-in-out forwards 1.5s 1.8s;
 }
 
 /********** animation loading ************/
