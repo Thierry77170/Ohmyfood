@@ -107,6 +107,21 @@ h2 {
 
 /********** plate and price ********/
 
+@keyframes moveAnimationChecked {
+    0% {
+        transform: translateX(65%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    51% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(61%);
+    }
+  }
+
 .plateAndPrice {
     cursor: pointer;
     display: flex;
@@ -128,6 +143,7 @@ h2 {
         animation-duration: 1s;
         animation-timing-function: ease-in-out; 
         animation-fill-mode: forwards;
+        animation-direction: alternate;
         right: 0px;
     }
     
@@ -161,19 +177,18 @@ h2 {
         height: 100%;
         display: flex;
         flex-direction: row;
-        list-style: none;
         padding: 0px;
         background-color: $color-green;
         border-radius: 0px 15px 15px 0px;
         position: relative;
-        right: -72px;
+        right: -60px;
         
         &--price {
             background-color: white;
             font-size: 0.94rem;
             padding-top: 40px;
             padding-left: 5px;
-            width: 44px;
+            width: 55px;
             height: 69px;
             margin: 0px;
         }
@@ -188,7 +203,7 @@ h2 {
             align-items: center;
             position: absolute;
             top: 24.5px;
-            left: 60%;
+            left: 70%;
         }   
     }
 }
