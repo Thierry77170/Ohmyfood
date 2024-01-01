@@ -107,21 +107,6 @@ h2 {
 
 /********** plate and price ********/
 
-@keyframes moveAnimationChecked {
-    0% {
-        transform: translateX(65%);
-    }
-    50% {
-      transform: translateX(0%);
-    }
-    51% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(61%);
-    }
-  }
-
 .plateAndPrice {
     cursor: pointer;
     display: flex;
@@ -182,6 +167,15 @@ h2 {
         border-radius: 0px 15px 15px 0px;
         position: relative;
         right: -60px;
+
+        &:hover {
+        animation-name: moveAnimationChecked;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out; 
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+        right: 0px;
+        }
         
         &--price {
             background-color: white;
