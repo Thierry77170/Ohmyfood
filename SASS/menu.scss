@@ -168,15 +168,6 @@ h2 {
         position: relative;
         right: -60px;
 
-        &:hover {
-        animation-name: moveAnimationChecked;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out; 
-        animation-fill-mode: forwards;
-        animation-direction: alternate;
-        right: 0px;
-        }
-        
         &--price {
             background-color: white;
             font-size: 0.94rem;

@@ -280,14 +280,6 @@ h2 {
   position: relative;
   right: -60px;
 }
-.plateAndPrice__checked:hover {
-  animation-name: moveAnimationChecked;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-direction: alternate;
-  right: 0px;
-}
 .plateAndPrice__checked--price {
   background-color: white;
   font-size: 0.94rem;
