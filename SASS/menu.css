@@ -22,20 +22,6 @@
   }
 }
 /********** plate and price ************/
-@keyframes moveAnimationChecked {
-  0% {
-    transform: translateX(65%);
-  }
-  50% {
-    transform: translateX(0%);
-  }
-  51% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(61%);
-  }
-}
 @keyframes plateTranslate {
   0% {
     transform: translateX(-40%);
@@ -240,11 +226,7 @@ h2 {
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
 }
 .plateAndPrice:hover .plateAndPrice__checked {
-  animation-name: moveAnimationChecked;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-direction: alternate;
+  transform: translate(0%);
   right: 0px;
 }
 .plateAndPrice__plate {
@@ -279,6 +261,7 @@ h2 {
   border-radius: 0px 15px 15px 0px;
   position: relative;
   right: -60px;
+  transition-duration: 0.5s;
 }
 .plateAndPrice__checked--price {
   background-color: white;
