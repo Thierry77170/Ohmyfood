@@ -1,170 +1,170 @@
 /******** button ***************/
 
 @mixin button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 218px;
-    height: 50px;
-    border-radius: 25px;
-    text-decoration: none;
-    margin: auto;
-    background: $button-gradient; 
-    box-shadow: $box-shadow;
-    opacity: 1;
-    transition: all .45s;
-    
-    &--text {
-        color: white;
-    }
-      
-    &:hover {
-        opacity: 0.8;
-        box-shadow: $box-shadow-hover;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: auto;
+  background: $button-gradient;
+  box-shadow: $box-shadow;
+  opacity: 1;
+  transition: all 0.45s;
+
+  &--text {
+    color: white;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    box-shadow: $box-shadow-hover;
+  }
 }
 
 /****** heart ****************/
 
 @mixin heart {
-    cursor: pointer;
-    width: 22px;
-    height: 21px;
-    position: absolute;
-    top: 205px;
-    left: 90%;
-    grid-column: 2/3;
-    grid-row: 1/3;
+  cursor: pointer;
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  top: 205px;
+  left: 90%;
+  grid-column: 2/3;
+  grid-row: 1/3;
 }
 
 @mixin likeBefore {
-    content: "";
-    display: block;
-    background-image: url("../assets/logo/Like.png"); 
-    width: 22px;
-    height: 21px;
-    position: absolute;
-    top: 0;
-    left: 0;
+  content: "";
+  display: block;
+  background-image: url("../assets/logo/Like.png");
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @mixin likeAfter {
-    content: "";
-    display: block;
-    background-image: url("../assets/logo/LikePink.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity;
-    width: 22px;
-    height: 21px;
+  content: "";
+  display: block;
+  background-image: url("../assets/logo/LikePink.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity;
+  width: 22px;
+  height: 21px;
 }
 
 /******** Photos menus ***************/
 
 @mixin photoMenu {
-    background-size: cover;
-    object-fit: cover;
-    background-position: center;
-    width: 100%;
-    height: 275px;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  width: 100%;
+  height: 275px;
 }
 
 /******** h2 menus ***************/
 
 @mixin h2-menu {
-    font-size: 1rem;
-    font-weight: $font-weight300;
-    margin: 40px 0px 5px 0px;
+  font-size: 1rem;
+  font-weight: $font-weight300;
+  margin: 40px 0px 5px 0px;
 }
 
 @mixin h2-underlines {
-    border-bottom: 3px solid $color-green;
-    width: 40px;
-    height: 0px;
+  border-bottom: 3px solid $color-green;
+  width: 40px;
+  height: 0px;
 }
 
 /************* footer ***************/
-       
-@mixin footerMobile {
-    display: grid;
-    grid-template-columns: 20rem;
-    grid-template-rows: auto auto;
-    background-color: $color-grey;
-    padding: 23px 1.56rem;
-    justify-content: center;
-    &__title {
-        font-family: $font-family-shrikhand;
-        font-size: 18px;
-        color: white;  
-        margin: 0px;
-        padding-left: 20px;
-    }
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-        list-style: none;
-        padding: 0px;
-        margin: 16px 0px 0px 0px;
-    } 
+@mixin footerMobile {
+  display: grid;
+  grid-template-columns: 20rem;
+  grid-template-rows: auto auto;
+  background-color: $color-grey;
+  padding: 23px 1.56rem;
+  justify-content: center;
+  &__title {
+    font-family: $font-family-shrikhand;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    padding-left: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+    padding: 0px;
+    margin: 16px 0px 0px 0px;
+  }
 }
 
 @mixin footerLiensHover {
-    color: $color-green;
+  color: $color-green;
 }
 
 @mixin footerLogo {
-    font-size: 14px;
-    margin-right: 11px;
+  font-size: 14px;
+  margin-right: 11px;
 }
 
 /********** loader ************/
 
 @mixin loader {
-    content: "";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 252, 252);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1; 
-    opacity: 1;
-    animation-name: loaderOpacity;
-    animation-duration:2.5s;
-    animation-fill-mode: forwards;
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 252, 252);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 1;
+  animation-name: loaderOpacity;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
 }
 
 @mixin loaderBefore {
-    content: "CHARGEMENT";
-    font-size: 22px;
-    font-weight: $font-weight500; 
-    color: $color-grey;
-    text-shadow: 2px 2px 5px $background-color-primary;
-    font-weight: $font-weight500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+  content: "CHARGEMENT";
+  font-size: 22px;
+  font-weight: $font-weight500;
+  color: $color-grey;
+  text-shadow: 2px 2px 5px $background-color-primary;
+  font-weight: $font-weight500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 }
 
 @mixin loaderAfter {
-    content: "";
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border-right: 10px solid transparent;
-    border-top: 10px solid $background-color-primary;
-    animation-name: loaderRotate;
-    animation-duration: 1.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 2;   
+  content: "";
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $background-color-primary;
+  animation-name: loaderRotate;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
 }

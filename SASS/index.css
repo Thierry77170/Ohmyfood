@@ -67,6 +67,11 @@
     z-index: -1;
   }
 }
+/*********** body ***********/
+body {
+  margin: 0px;
+}
+
 /*********** header mobile ***********/
 .header__logo {
   grid-column-start: 2;
@@ -80,7 +85,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   font-weight: 500;
   font-size: 1rem;
   gap: 15px;
@@ -88,7 +93,7 @@
 
 /************ exploration mobile ***********/
 .exploration {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   text-align: center;
   padding-bottom: 57px;
 }
@@ -113,7 +118,7 @@
   border-radius: 25px;
   text-decoration: none;
   margin: auto;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356dc, #ff79da);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   opacity: 1;
   transition: all 0.45s;
@@ -146,7 +151,7 @@
   grid-template-rows: auto;
   align-items: center;
   place-items: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   height: 72.38px;
   width: 100%;
   border-radius: 20px;
@@ -161,7 +166,7 @@
   color: white;
   height: 24px;
   width: 24px;
-  background-color: #9356DC;
+  background-color: #9356dc;
   justify-self: center;
   border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
   margin-left: -26px;
@@ -176,35 +181,35 @@
 }
 
 .fa-mobile-screen-button {
-  color: #7E7E7E;
+  color: #7e7e7e;
   cursor: pointer;
 }
 
 .rectangle:hover .fa-mobile-screen-button {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .fa-list-ul {
-  color: #7E7E7E;
+  color: #7e7e7e;
   cursor: pointer;
 }
 
 .rectangle:hover .fa-list-ul {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .fa-store {
-  color: #7E7E7E;
+  color: #7e7e7e;
   cursor: pointer;
 }
 
 .rectangle:hover .fa-store {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 /************* Restaurants mobile ****************/
 .restaurants {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   display: grid;
   grid-template-columns: 98%;
   justify-content: center;
@@ -275,7 +280,7 @@
   height: 29px;
   width: 80px;
   margin: 16px 16px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #008766;
   border-radius: 2px;
   display: flex;
@@ -390,7 +395,7 @@ input {
   font-size: 22px;
   font-weight: 500;
   color: #353535;
-  text-shadow: 2px 2px 5px #9356DC;
+  text-shadow: 2px 2px 5px #9356dc;
   font-weight: 500;
   display: flex;
   justify-content: center;
@@ -403,7 +408,7 @@ input {
   width: 200px;
   border-radius: 50%;
   border-right: 10px solid transparent;
-  border-top: 10px solid #9356DC;
+  border-top: 10px solid #9356dc;
   animation-name: loaderRotate;
   animation-duration: 1.5s;
   animation-timing-function: linear;
@@ -444,10 +449,10 @@ input {
     width: 19.6rem;
   }
   .rectangle .fa-mobile-screen-button {
-    color: #7E7E7E;
+    color: #7e7e7e;
   }
   .rectangle .fa-list-ul {
-    color: #7E7E7E;
+    color: #7e7e7e;
   }
   /****** Restaurants tablette and mobile *****/
   .restaurants {

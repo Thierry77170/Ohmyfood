@@ -4,243 +4,243 @@
 
 /****** General mobile *****/
 body {
-    font-family: $font-family-roboto;
-  }
+  font-family: $font-family-roboto;
+  margin: 0px;
+}
 
 /*********** main **********/
 .photoMenu1 {
-    background-image: url(../assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    @include photoMenu;
+  background-image: url(../assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  @include photoMenu;
 }
 
 .photoMenu2 {
-    background-image: url(../assets/images/stil-u2Lp8tXIcjw-unsplash.jpg);
-    @include photoMenu;
+  background-image: url(../assets/images/stil-u2Lp8tXIcjw-unsplash.jpg);
+  @include photoMenu;
 }
 
 .photoMenu3 {
-    background-image: url(../assets/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-    @include photoMenu;
+  background-image: url(../assets/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  @include photoMenu;
 }
 
 .photoMenu4 {
-    background-image: url(../assets/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-    @include photoMenu;
+  background-image: url(../assets/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  @include photoMenu;
 }
 
 .menu {
-    background-color: $background-color-grey;
-    border-radius: 40px 40px 0px 0px;
-    max-width: 1055px;
-    margin: auto;
-    padding-bottom: 40px;
+  background-color: $background-color-grey;
+  border-radius: 40px 40px 0px 0px;
+  max-width: 1055px;
+  margin: auto;
+  padding-bottom: 40px;
 }
 
 /********* h1 and heart **********/
 .container li {
-    list-style: none;
+  list-style: none;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 30px 15px 0px 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: -32px;
+  gap: 24px;
+
+  &__title {
     margin: 0px;
-    padding: 30px 15px 0px 15px;
-    align-items: center;
-    justify-content: center;
-    margin-top: -32px;
-    gap: 24px;
-    
-    &__title {
-        margin: 0px;
-        font-size: 28px;
-        font-family: $font-family-shrikhand;
-        font-weight: $font-weight400;
-    }
+    font-size: 28px;
+    font-family: $font-family-shrikhand;
+    font-weight: $font-weight400;
+  }
 }
 
 input {
-    display: none;
+  display: none;
 }
 
 .menilmontant {
-    display: flex;
-    align-items: center;
-    width: 22px;
-    height: 21px;
-    position: relative;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 22px;
+  height: 21px;
+  position: relative;
+  cursor: pointer;
 
-    &__like::before {
-        @include likeBefore;
-    }
+  &__like::before {
+    @include likeBefore;
+  }
 
-    &__like::after {
-        @include likeAfter;
-    }   
+  &__like::after {
+    @include likeAfter;
+  }
 }
 
 #menilmontant:checked + .menilmontant__like::after {
-    opacity: 1;
-    animation: changeHeart 0.4s forwards;
+  opacity: 1;
+  animation: changeHeart 0.4s forwards;
 }
 
 #menilmontant:not(:checked) + .menilmontant__like::after {
-    opacity: 0;
-    animation: changeHeartReverse 0.4s forwards;
+  opacity: 0;
+  animation: changeHeartReverse 0.4s forwards;
 }
 
 /********** title-menu **************/
 h2 {
-    @include h2-menu;
+  @include h2-menu;
 }
 
 .menuPart {
-    width: 98%;
-    max-width: 634px;
-    margin: auto;
+  width: 98%;
+  max-width: 634px;
+  margin: auto;
 
-    &__underlines {
-        @include h2-underlines;
-    }
+  &__underlines {
+    @include h2-underlines;
+  }
 }
 
 /********** plate and price ********/
 
 .plateAndPrice {
-    cursor: pointer;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 69px;
+  padding: 0px;
+  width: 98%;
+  max-width: 634px;
+  margin: auto;
+  margin-top: 12px;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+
+  &:hover .plateAndPrice__checked {
+    transform: translate(0%);
+    right: 0px;
+  }
+
+  &__plate {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &--title {
+      margin: 5px 0px;
+      font-size: 1.125rem;
+      font-weight: $font-weight500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &--text {
+      margin: 5px 0px;
+      font-size: 0.94rem;
+      font-weight: $font-weight300;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__checked {
+    width: 152px;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    height: 69px;
     padding: 0px;
-    width: 98%;
-    max-width: 634px;
-    margin: auto;
-    margin-top: 12px;
-    align-items: center;
-    background-color: white;
-    border-radius: 15px; 
-    overflow: hidden;
-    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
-   
-    &:hover .plateAndPrice__checked {
-        transform: translate(0%);
-        right: 0px;
-    }
-    
-    &__plate {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-left: 15px;
-        overflow: hidden;
-        white-space: nowrap;
+    background-color: $color-green;
+    border-radius: 0px 15px 15px 0px;
+    position: relative;
+    right: -60px;
+    transition-duration: 0.5s;
 
-        &--title {
-            margin: 5px 0px;
-            font-size: 1.125rem;
-            font-weight: $font-weight500;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        &--text {
-            margin: 5px 0px;
-            font-size: 0.94rem;
-            font-weight: $font-weight300;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    &--price {
+      background-color: white;
+      font-size: 0.94rem;
+      padding-top: 40px;
+      padding-left: 5px;
+      width: 55px;
+      height: 69px;
+      margin: 0px;
     }
 
-    &__checked {
-        width: 152px;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        padding: 0px;
-        background-color: $color-green;
-        border-radius: 0px 15px 15px 0px;
-        position: relative;
-        right: -60px;
-        transition-duration: 0.5s;
-
-        &--price {
-            background-color: white;
-            font-size: 0.94rem;
-            padding-top: 40px;
-            padding-left: 5px;
-            width: 55px;
-            height: 69px;
-            margin: 0px;
-        }
-
-        &--logo {
-            background-color: white;
-            border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 24.5px;
-            left: 70%;
-        }   
+    &--logo {
+      background-color: white;
+      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 24.5px;
+      left: 70%;
     }
+  }
 }
 
 .plateAndPrice__checked--logo i.fa-solid {
-    color: $color-green;
-    font-size: 16px;
-    margin-right: 0px;  
+  color: $color-green;
+  font-size: 16px;
+  margin-right: 0px;
 }
 
 /********** button ************/
 .button {
-    @include button;
-    margin-top: 40px;
+  @include button;
+  margin-top: 40px;
 }
 
 .L1 {
-    animation: plateTranslate ease-in-out forwards 1.5s;
+  animation: plateTranslate ease-in-out forwards 1.5s;
 }
 
 .L2 {
-    animation: plateTranslate ease-in-out forwards 1.5s 0.2s;
-
+  animation: plateTranslate ease-in-out forwards 1.5s 0.2s;
 }
 
 .L3 {
-    animation: plateTranslate ease-in-out forwards 1.5s 0.4s;
+  animation: plateTranslate ease-in-out forwards 1.5s 0.4s;
 }
 
 .L4 {
-    animation: plateTranslate ease-in-out forwards 1.5s 0.6s;
+  animation: plateTranslate ease-in-out forwards 1.5s 0.6s;
 }
 
 .L5 {
-    animation: plateTranslate ease-in-out forwards 1.5s 0.8s;
+  animation: plateTranslate ease-in-out forwards 1.5s 0.8s;
 }
 
 .L6 {
-    animation: plateTranslate ease-in-out forwards 1.5s 1s;
+  animation: plateTranslate ease-in-out forwards 1.5s 1s;
 }
 
 .L7 {
-    animation: plateTranslate ease-in-out forwards 1.5s 1.2s;
+  animation: plateTranslate ease-in-out forwards 1.5s 1.2s;
 }
 
 .L8 {
-    animation: plateTranslate ease-in-out forwards 1.5s 1.4s;
+  animation: plateTranslate ease-in-out forwards 1.5s 1.4s;
 }
 
 .L9 {
-    animation: plateTranslate ease-in-out forwards 1.5s 1.6s;
+  animation: plateTranslate ease-in-out forwards 1.5s 1.6s;
 }
 
 .L10 {
-    animation: plateTranslate ease-in-out forwards 1.5s 1.8s;
+  animation: plateTranslate ease-in-out forwards 1.5s 1.8s;
 }
 
 /********** animation loading ************/
@@ -248,10 +248,10 @@ h2 {
 /****** responsive tablette and desktop *****/
 
 @media screen and (min-width: 768px) {
-    .photoMenu1,
-    .photoMenu2,
-    .photoMenu3,
-    .photoMenu4 {
-        height: 383px;
-    }
+  .photoMenu1,
+  .photoMenu2,
+  .photoMenu3,
+  .photoMenu4 {
+    height: 383px;
+  }
 }
